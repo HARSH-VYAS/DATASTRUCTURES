@@ -172,5 +172,18 @@ public class Main {
   /*   CountFiles cf = new CountFiles();
       cf.countFilesinServer();
 */
+
+        // First non repeat occurrence
+       /* FindFirstNonRepeat ffn = new FindFirstNonRepeat("tsstr");
+        FindFirstNonRepeat ffn1 = new FindFirstNonRepeat("sstr");
+        FindFirstNonRepeat ffnw = new FindFirstNonRepeat("sstrrrawwssdss");
+        ffn.firstOccur();
+        ffn1.firstOccur();
+        ffnw.firstOccur();*/
+
+
+
+
+
     }
 }

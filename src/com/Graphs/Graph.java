@@ -67,8 +67,6 @@ public class Graph {
         }
     }
 
-
-
     public void printGraph(Graph g){
          for(AdjacencyNode n : g.adjacencyList){
              System.out.println("Printing the list for"+ n.value);
