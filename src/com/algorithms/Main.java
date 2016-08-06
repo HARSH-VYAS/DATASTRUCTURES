@@ -27,8 +27,16 @@ public class Main {
          System.out.println("Output is:"+ m);*/
 
         // Count minimum coins needed to change
-        CountMinCoinsChange countMinCoinsChange= new CountMinCoinsChange(coins1,change);
-        countMinCoinsChange.count();
+  /*      CountMinCoinsChange countMinCoinsChange= new CountMinCoinsChange(coins1,change);
+           countMinCoinsChange.count();
+*/
+        // Tower of Hanoi Problem
+
+        TowerOfHanoi toh = new TowerOfHanoi();
+        // TOH(n,from,to,aux)
+        toh.TOH(3,1,3,2);
+        toh.TOH(4,1,3,2);
+        toh.TOH(5,1,3,2);
 
     }
 

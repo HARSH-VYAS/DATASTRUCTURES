@@ -15,9 +15,9 @@ public class Graph {
         for(int i=0;i<v;i++){
             adjacencyList.add(new AdjacencyNode(i));
         }
-
         for(int i=0;i<v;i++){
-            System.out.println("Node:::"+adjacencyList.get(i).value);
+            // Print Adjacency nodes
+            System.out.println("Adjacency Nodes:::"+ adjacencyList.get(i).value);
         }
 
     }
@@ -39,7 +39,7 @@ public class Graph {
         dest.next=temp;
     }
 
-   public void bredthFSearch(Graph g, int s){
+   public void breadthFSearch(Graph g, int s){
        boolean visited[] = new boolean[g.V];
        visited[s]=true;
       for(AdjacencyNode n : g.adjacencyList){

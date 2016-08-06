@@ -17,7 +17,9 @@ public class Main {
         g.addEdge(g,2,4);
         g.addEdge(g,4,3);
         //g.printGraph(g);
-        g.bredthFSearch(g,0);
+        g.breadthFSearch(g,0);
+        g.depthFSearch(g,0);
+        g.printGraph(g);
 
 
 
