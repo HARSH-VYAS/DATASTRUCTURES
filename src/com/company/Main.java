@@ -1,5 +1,7 @@
 package com.company;
 
+import sun.awt.image.ImageWatched;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -181,6 +183,22 @@ public class Main {
         ffn1.firstOccur();
         ffnw.firstOccur();*/
 
+        // Jolly jumper
+       /* int arr[] = {1,4,2,3};
+        JollyJumper j = new JollyJumper();
+        boolean a = j.jump(arr);
+        System.out.println(a);*/
+        // LinkedList implementation
+        LinkedList list = new LinkedList();
+        list.insertAtBegin(new ListNode(1));
+        list.insertAtBegin(new ListNode(2));
+        list.insertAtBegin(new ListNode(3));
+        list.insertAtBegin(new ListNode(4));
+        list.insertAtBegin(new ListNode(5));
+        String result=  LinkedList.toString(list.getHead());
+        System.out.println(result);
+        list = list.reverseListUsingStack(list.getHead(), list);
+        System.out.println(list.getHead().getNext().getData());
 
 
 

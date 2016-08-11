@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Stack;
+
 /**
  * Created by Harsh P Vyas on 8/4/2016.
  */
@@ -142,11 +144,11 @@ public class LinkedList {
             result+="]";
         result = result+ node.getData();
         ListNode temp = node.next;
-
         while (temp.next!=null){
             result= result+ ","+temp.getData();
             temp=temp.next;
         }
+        result = result+","+temp.getData();
     return  result + "]";
     }
 
@@ -157,7 +159,6 @@ public class LinkedList {
     // Get the position of the node
 
     public int getPosition(int data){
-
         ListNode temp;
         int position =0;
         if(head==null)
@@ -167,16 +168,12 @@ public class LinkedList {
             return 0;
 
         else{
-
             temp = head;
-
             while(temp.data !=data){
                 temp = temp.next;
                 position++;
             }
-
         }
-
         return Integer.MIN_VALUE;
     }
 
@@ -184,5 +181,25 @@ public class LinkedList {
         head=null;
         length=0;
 
+    }
+
+    public LinkedList reverseListUsingStack(ListNode node, LinkedList list){
+
+        Stack<ListNode> stack = new Stack<ListNode>();
+        ListNode temp = node;
+        stack.push(temp);
+        while(temp.next!=null){
+            stack.push(temp.next);
+            temp = temp.getNext();
+        }
+
+        stack.push(temp);
+        list.head= stack.pop();
+        temp = list.getHead();
+        while(!stack.isEmpty()){
+            temp.next= stack.pop();
+            temp = temp.next;
+        }
+        return list;
     }
 }
