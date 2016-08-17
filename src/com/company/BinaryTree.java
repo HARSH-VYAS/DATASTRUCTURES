@@ -194,9 +194,26 @@ public class BinaryTree {
                     System.out.println("Values at level "+level+"is "+list.get(i)+"->");
                 }
             }
-
         }
-
+    }
+    public void deleteNode(Node root){
+    // Deleting the node is the trick replace the node's data with the leaf node's data then remove leaf node.
+    // Do level order traversal.
+        Queue<Node> q = new LinkedList<Node>();
+        q.offer(root);
+        Node deepest = null;
+        Node temp= null;
+        while(!q.isEmpty()){
+            temp = q.poll();
+           if(temp.getLeft()!=null){
+               q.offer(temp.getLeft());
+           }
+           if(temp.getRight()!=null){
+               q.offer(temp.getRight());
+           }
+        }
+        deepest=temp;
+        System.out.println("peek is"+q.peek());
     }
 
     public static class Node{
@@ -233,6 +250,7 @@ public class BinaryTree {
             this.right = right;
         }
     }
+
 
     public static void main(String [] args){
 
@@ -278,10 +296,12 @@ public class BinaryTree {
         newTree.insert(7);
         newTree.insert(1);
         TreeAlgorithms treeAlgorithms = new TreeAlgorithms();
-        int depth= treeAlgorithms.minimumDepth(newTree);
-        System.out.println("depth is"+depth);
-
+        /* int depth= treeAlgorithms.minimumDepth(newTree);
+        System.out.println("depth is"+depth);*/
+        Node node1 =treeAlgorithms.findDeepestNode(node);
+        System.out.println("Deepest Node Data"+node1.getData());
 
     }
+
 
 }
