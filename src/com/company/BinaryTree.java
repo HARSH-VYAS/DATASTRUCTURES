@@ -95,7 +95,7 @@ public class BinaryTree {
     }
 
     public void postOrderWithStack(Node root){
-        Stack<Node> stack = new Stack<Node>();
+       Stack<Node> stack = new Stack<Node>();
         Node node = null;
         if(root==null)
             return;
@@ -133,7 +133,7 @@ public class BinaryTree {
     }
 
     public void preOrderWithStack(Node root){
-        Stack<Node> stack = new Stack<Node>();
+   Stack<Node> stack = new Stack<Node>();
         Node temp;
         stack.push(root);
         while(!stack.isEmpty()){

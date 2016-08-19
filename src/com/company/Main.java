@@ -3,6 +3,8 @@ package com.company;
 import sun.awt.image.ImageWatched;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -189,7 +191,7 @@ public class Main {
         boolean a = j.jump(arr);
         System.out.println(a);*/
         // LinkedList implementation
-        LinkedList list = new LinkedList();
+        /*LinkedList list = new LinkedList();
         list.insertAtBegin(new ListNode(1));
         list.insertAtBegin(new ListNode(2));
         list.insertAtBegin(new ListNode(3));
@@ -199,9 +201,21 @@ public class Main {
         System.out.println(result);
         list = list.reverseListUsingStack(list.getHead(), list);
         System.out.println(list.getHead().getNext().getData());
-
-
-
-
+        */
+        MaxNonNegative mx = new MaxNonNegative();
+        int [] array = {24115, -75629, -46517, 30105, 19451, -82188, 99505, 6752, -36716, 54438, -51501, 83871, 11137, -53177, 22294, -21609, -59745, 53635, -98142, 27968, -260, 41594, 16395, 19113, 71006, -97942, 42082, -30767, 85695, -73671};
+        int [] aa = {0,0,-1,0};
+        List l =Arrays.asList(array);
+        List ll =Arrays.asList(aa);
+        ArrayList<Integer> a= new ArrayList<Integer>();
+        a.add(0);
+        a.add(0);
+        a.add(-1);
+        a.add(0);
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        result=mx.maxset(a);
+        for(int i=0;i<result.size();i++){
+            System.out.println(result.get(i));
+        }
     }
 }

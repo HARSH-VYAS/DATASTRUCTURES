@@ -1,18 +1,14 @@
-package com.company;
+package com.codejam;
+
+import java.util.ArrayList;
 
 /**
  * Created by Harsh P Vyas on 8/16/2016.
  */
-public class Stack {
-    // This implementation is using fixed sized array.
-
-    int [] stackarr;
+public class StackDynamic {
+    ArrayList<Integer> arrayList = new ArrayList<Integer>();
     int top=-1;
-    int capacity;
-    Stack(int capacity){
-        this.capacity=capacity;
-        stackarr = new int [capacity];
-    }
+
     public int size(){
         return (top+1);
     }
@@ -20,23 +16,21 @@ public class Stack {
         return (top<0);
     }
 
-    public void push(int a) throws Exception{
-        if(size()==capacity)
-            throw new Exception("Stack is Full");
-        stackarr[++top]=a;
+    public void push(int a){
+        arrayList.add(++top,a);
     }
 
     public int pop()throws  Exception{
         if(isEmpty())
             throw  new Exception("Stack is empty");
-        int a = stackarr[top];
-        stackarr[top--]=0;
+        int a = arrayList.get(top);
+        arrayList.remove(top);
         return a;
     }
     public int top()throws Exception{
         if(isEmpty())
             throw new Exception("Stack is empty");
-        return stackarr[top];
+        return arrayList.get(top);
     }
     public String toString() {
         String s ="[";
@@ -44,8 +38,9 @@ public class Stack {
             System.out.println("Stack is empty");
         else{
             for(int i=0;i<size();i++)
-                s=s+stackarr[i];
+                s=s+arrayList.get(i);
         }
         return s+"]";
     }
+
 }

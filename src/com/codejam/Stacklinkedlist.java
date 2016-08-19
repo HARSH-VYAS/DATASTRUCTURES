@@ -1,4 +1,6 @@
-package com.company;
+package com.codejam;
+
+import com.company.ListNode;
 
 /**
  * Created by Harsh P Vyas on 8/16/2016.
