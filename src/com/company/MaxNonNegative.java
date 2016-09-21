@@ -15,9 +15,6 @@ NOTE: If there is a tie, then compare with segment's length and return segment w
 NOTE 2: If there is still a tie, then return the segment with minimum starting index
 
 */
-
-
-
 public class MaxNonNegative {
     long max =0;
     long max1=0;
