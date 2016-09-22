@@ -1,5 +1,7 @@
 package com.company;
 
+import sun.awt.image.ImageWatched;
+
 import java.util.Stack;
 
 /**
@@ -9,13 +11,22 @@ public class LinkedList {
 
     ListNode head;
     int length;
-    LinkedList(){
+    public LinkedList(){
         length=0;
     }
 
     public synchronized ListNode getHead(){
         return head;
     }
+
+    // Get the linkedlist data
+
+    public String get(LinkedList list){
+        String s = list.toString();
+        System.out.println(s);
+        return s;
+    }
+
 
     // Insertion portion
     public void insertAtBegin(ListNode node){
@@ -35,11 +46,11 @@ public class LinkedList {
             head = node;
             return;
         }
-        ListNode p,q; //Temp nodes
-
-        for(p=head;(q=p.getNext())!=null;p=q){
-            p.setNext(node);
+        ListNode p=getHead(); //Temp nodes
+        while(p.getNext()!=null){
+            p=p.getNext();
         }
+        p.setNext(node);
         length++;
     }
     // Insert the node in the particular position
@@ -90,7 +101,6 @@ public class LinkedList {
             head=null;
             return;
         }
-
         ListNode p=head,q=null;
         while(p.getNext()!=null) {
             q = p;
@@ -101,30 +111,26 @@ public class LinkedList {
     }
 
     public synchronized void removeMatched(ListNode node){
-
         if(head == null)
             return;
-        ListNode p = head,q;
-        while(p.next.equals(node)){
+        if(head==node)
+            head=head.next;
+        ListNode p = head,q=null;
+        while(!p.next.equals(node)){
             q=p;
             p=p.next;
         }
         q=p;
         q.next=p.next.next;
-        p.setNext(null);
     }
 
     public void removeAtPosition(int position){
-
         if(position<0)
             position =0;
-
         if(position>length)
             position=length-1;
-
         if(position ==0)
             head=null;
-
         else{
             ListNode p = head,q;
             for(int i=1;i<position;i++){
@@ -132,10 +138,25 @@ public class LinkedList {
             }
             q=p.next;
             p.next= p.next.next;
-            q=null;
             length--;
-
         }
+    }
+
+    public void removeDups(ListNode node){
+        if(node==null)
+            return;
+        ListNode temp = node;
+        ListNode prev=null;
+        while(temp.next !=null){
+            prev=temp;
+            if(temp.next.getData()==temp.data)
+                temp.next=temp.next.next;
+            else
+                temp=temp.next;
+        }
+        if(prev.data==temp.data);
+            prev.next=null;
+
     }
 
     public static String toString(ListNode node){
@@ -163,10 +184,8 @@ public class LinkedList {
         int position =0;
         if(head==null)
             return -1;
-
         if(head.data==data)
             return 0;
-
         else{
             temp = head;
             while(temp.data !=data){
@@ -180,11 +199,8 @@ public class LinkedList {
     public void clearList(ListNode head){
         head=null;
         length=0;
-
     }
-
     public LinkedList reverseListUsingStack(ListNode node, LinkedList list){
-
         Stack<ListNode> stack = new Stack<ListNode>();
         ListNode temp = node;
         stack.push(temp);
@@ -192,7 +208,6 @@ public class LinkedList {
             stack.push(temp.next);
             temp = temp.getNext();
         }
-
         stack.push(temp);
         list.head= stack.pop();
         temp = list.getHead();
