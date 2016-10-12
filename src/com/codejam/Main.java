@@ -10,9 +10,10 @@ public class Main {
 /*        CountingSheep c = new CountingSheep();
         c.startCounting();*/
 
-        Fractiles.permutation("abcd");
+        //Fractiles.permutation("abcd");
 
-
-
+        LongestRepeatingString l = new LongestRepeatingString();
+        int a = l.lengthOfLongestSubstring("!\\\"#$%&'()*+,-./:;<=>?@[\\\\]^_`{|}~ ");
+        System.out.println(a);
     }
 }

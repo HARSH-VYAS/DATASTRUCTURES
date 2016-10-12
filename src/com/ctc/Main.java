@@ -35,9 +35,8 @@ public class Main {
 /*        StringCompression stringCompression = new StringCompression();
         String s = stringCompression.compressB("aaaabbccc");
         System.out.println(s);*/
-
         int [][]mat = {{1,2,3},{4,0,6},{7,8,9}};
-/*        ImageRotation imageRotation = new ImageRotation();
+/*      ImageRotation imageRotation = new ImageRotation();
         imageRotation.rotateImage(mat);*/
 
        /* NullifyRC nullifyRC = new NullifyRC();
