@@ -2,6 +2,9 @@ package com.ctc;
 
 import com.company.LinkedList;
 import com.company.ListNode;
+import com.sun.org.apache.xpath.internal.operations.*;
+
+import java.lang.String;
 
 /**
  * Created by Harsh P Vyas on 9/19/2016.
@@ -46,7 +49,7 @@ public class Main {
         System.out.print(rotationString.checkRotation("waterballa", "erballwat"));*/
 
         // Remove Duplicates from the linkedlist
-        LinkedList list = new LinkedList();
+        /*LinkedList list = new LinkedList();
         ListNode head = new ListNode(1);
         list.insertAtBegin(head);
         list.insertAtEnd(new ListNode(2));
@@ -69,10 +72,10 @@ public class Main {
         int k = findJKthElementLink.returnKthNode(list,3);
         System.out.println(k);
 
-       /* PartitionLinkedList p = new PartitionLinkedList();
+       *//* PartitionLinkedList p = new PartitionLinkedList();
         LinkedList newList = p.partition(list,3);
         String r = LinkedList.toString(newList.getHead());
-        System.out.println(r);*/
+        System.out.println(r);*//*
 
         LinkedList list1 = new LinkedList();
         LinkedList list2 = new LinkedList();
@@ -87,8 +90,43 @@ public class Main {
         ListSum listSum = new ListSum();
         sum=listSum.sumList(list1,list2);
         System.out.println(LinkedList.toString(sum.getHead()));
+*/
 
+/*        Calculator calculator = new Calculator();
+        int result = calculator.calculate("2-6-7*8/2+5");
+        System.out.println(result);
+        int result1 = calculator.calculate("2-3+5*2+1");
+        System.out.println(result1);*/
 
+/*      LRUCache lruCache = new LRUCache(5);
 
+        lruCache.insertInCache(1,"ABC");
+        lruCache.insertInCache(2,"BCD");
+        lruCache.insertInCache(3,"CDE");
+        lruCache.insertInCache(4,"DEF");
+        lruCache.insertInCache(5,"EFG");
+
+        String value = lruCache.getValue(2);
+        System.out.println(value);
+        System.out.println(lruCache.head.key);
+
+        value = lruCache.getValue(1);
+        System.out.println(value);
+        System.out.println(lruCache.head.key);
+
+        value = lruCache.getValue(3);
+        System.out.println(value);
+        System.out.println(lruCache.head.key);
+
+        lruCache.insertInCache(6,"EFG");
+        System.out.println(lruCache.head.key);
+        lruCache.insertInCache(7,"GHI");
+        System.out.println(lruCache.head.key);
+        lruCache.insertInCache(8,"JKL");
+        System.out.println(lruCache.head.key);
+
+        String value1 = lruCache.getValue(5);
+        System.out.println(value1);
+        System.out.println(lruCache.head.key);*/
     }
 }

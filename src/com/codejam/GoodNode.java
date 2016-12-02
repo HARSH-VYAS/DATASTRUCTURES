@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class GoodNode {
 
-/*    public static int find(int[] parent, int x) {
+    public static int find(int[] parent, int x) {
         if(x == 0)
             return 0;
 
@@ -48,9 +48,9 @@ public class GoodNode {
         }
         s.close();
         System.out.println(minChanges(A));
-    }*/
+    }
 
-    static int goodNodes(int[] points_to) {
+   /* static int goodNodes(int[] points_to) {
 
         boolean goodNode[] = new boolean[points_to.length+1];
         int [] arr = new int [points_to.length+1];
@@ -98,4 +98,5 @@ public class GoodNode {
         int count = goodNodes(a);
         System.out.println(count);
     }
+    */
 }

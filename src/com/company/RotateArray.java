@@ -15,6 +15,7 @@ public class RotateArray {
     RotateArray(int a[]){
     this.a=a;
     }
+
     public void rotate(int n){
 
 
