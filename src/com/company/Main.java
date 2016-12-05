@@ -223,10 +223,16 @@ public class Main {
         s.removeDuplicate("bbaccdef");*/
 
 
-        IBMStringReverse ibmStringReverse = new IBMStringReverse();
-        ibmStringReverse.reverseGiven("Hello World");
+/*        IBMStringReverse ibmStringReverse = new IBMStringReverse();
+        ibmStringReverse.reverseGiven("Hello World");*/
 
+        /*FindCycleInArray f = new FindCycleInArray();
+        int a[] ={2,0,0,0,0};
+        boolean t = f.findCycle(a);
+        System.out.println(t);*/
 
+       // FunWithPalindrome.funPal("acdapmpomp");
+        FunWithPalindrome.splitString("1/3/2012 16:00:00\t333.74");
 
     }
 }
